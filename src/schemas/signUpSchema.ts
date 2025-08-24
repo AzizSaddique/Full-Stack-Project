@@ -6,7 +6,7 @@ export const userNameValidation = z
 .regex(/^[a-zA-Z0-9_]+$/, 'User name must contain only alphanumeric characters and underscores')
 
 export const signUpSchema = z.object({
-    userName: userNameValidation,
+    username: userNameValidation,
     email: z.string().email({message:'Email is not valid'}),
     password: z.string().min(6,{message:'Password must be at least 6 characters long'}),
 })
